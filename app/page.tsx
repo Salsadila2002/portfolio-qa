@@ -131,6 +131,58 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Certifications */}
+      <section id="certifications" className="mx-auto max-w-3xl px-6 py-20">
+        <h2 className="mb-6 text-2xl font-bold text-dark">Certifications</h2>
+        <p className="mb-8 text-slate-600">
+          QA certifications I am working toward. Badges and links will be added
+          once earned.
+        </p>
+        <div className="grid gap-6 md:grid-cols-2">
+          {[
+            {
+              title: "ISTQB Foundation Level",
+              provider: "ISTQB",
+              status: "In Progress",
+            },
+            {
+              title: "Software Testing Fundamentals",
+              provider: "Online Course",
+              status: "Planned",
+            },
+            {
+              title: "API Testing with Postman",
+              provider: "Postman",
+              status: "Planned",
+            },
+            {
+              title: "Agile Testing Basics",
+              provider: "Coursera / Udemy",
+              status: "Planned",
+            },
+          ].map((cert) => (
+            <div
+              key={cert.title}
+              className="rounded-xl border border-slate-200 bg-white p-6 transition hover:border-primary/40"
+            >
+              <div className="mb-3 flex items-center justify-between">
+                <h3 className="font-semibold text-dark">{cert.title}</h3>
+                <span
+                  className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${
+                    cert.status === "In Progress"
+                      ? "bg-amber-100 text-amber-700"
+                      : "bg-slate-100 text-slate-600"
+                  }`}
+                >
+                  {cert.status}
+                </span>
+              </div>
+              <p className="text-sm text-slate-500">{cert.provider}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Contact */}
       <section id="contact" className="bg-dark px-6 py-20 text-white">
         <div className="mx-auto max-w-3xl text-center">
