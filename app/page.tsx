@@ -60,8 +60,45 @@ export default function Home() {
         </p>
       </section>
 
+      {/* Experience */}
+      <section id="experience" className="bg-white px-6 py-20">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="mb-6 text-2xl font-bold text-dark">Experience</h2>
+          <div className="space-y-6">
+            {[
+              {
+                role: "QA Intern",
+                company: "Company Name",
+                period: "Month Year - Month Year",
+                desc: "Assisted in manual testing, wrote test cases, and reported bugs using spreadsheets.",
+              },
+              {
+                role: "Secretary",
+                company: "Organization Name",
+                period: "Month Year - Month Year",
+                desc: "Managed documentation, meeting minutes, and internal communications.",
+              },
+            ].map((exp) => (
+              <div
+                key={exp.role}
+                className="rounded-xl border border-slate-200 bg-slate-50 p-6 transition hover:border-primary/40"
+              >
+                <div className="mb-2 flex flex-col justify-between gap-1 sm:flex-row sm:items-center">
+                  <h3 className="font-semibold text-dark">{exp.role}</h3>
+                  <span className="text-sm text-slate-500">{exp.period}</span>
+                </div>
+                <p className="mb-2 text-sm font-medium text-primary">
+                  {exp.company}
+                </p>
+                <p className="text-sm text-slate-600">{exp.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Skills */}
-      <section className="bg-white px-6 py-20">
+      <section className="px-6 py-20">
         <div className="mx-auto max-w-3xl">
           <h2 className="mb-10 text-center text-2xl font-bold text-dark">
             Skills & Tools
