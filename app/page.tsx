@@ -19,31 +19,8 @@ const MailIcon = () => (
 export default function Home() {
   return (
     <main className="min-h-screen">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 px-6 py-4 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-3xl items-center justify-between">
-          <a href="#" className="font-bold text-dark">
-            Salsadila
-          </a>
-          <div className="flex flex-wrap gap-4 text-sm font-medium text-slate-600">
-            <a href="#experience" className="transition hover:text-primary">
-              Experience
-            </a>
-            <a href="#skills" className="transition hover:text-primary">
-              Skills
-            </a>
-            <a href="#projects" className="transition hover:text-primary">
-              Projects
-            </a>
-            <a href="#certifications" className="transition hover:text-primary">
-              Certs
-            </a>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero */}
-      <section className="flex min-h-[70vh] flex-col items-center justify-center px-6 text-center">
+      <section className="flex min-h-screen flex-col items-center justify-center px-6 text-center">
         <div className="mb-6 inline-block rounded-full bg-primary/10 px-4 py-1 text-sm font-medium text-primary">
           Manual QA Enthusiast
         </div>
@@ -61,6 +38,32 @@ export default function Home() {
             className="rounded-lg bg-primary px-6 py-3 font-medium text-white transition hover:bg-sky-600"
           >
             Get in Touch
+          </a>
+        </div>
+        <div className="mt-10 flex flex-wrap justify-center gap-4 text-sm font-medium text-slate-600">
+          <a
+            href="#experience"
+            className="rounded-full border border-slate-200 bg-white px-4 py-2 transition hover:border-primary hover:text-primary"
+          >
+            Experience
+          </a>
+          <a
+            href="#skills"
+            className="rounded-full border border-slate-200 bg-white px-4 py-2 transition hover:border-primary hover:text-primary"
+          >
+            Skills
+          </a>
+          <a
+            href="#projects"
+            className="rounded-full border border-slate-200 bg-white px-4 py-2 transition hover:border-primary hover:text-primary"
+          >
+            Projects
+          </a>
+          <a
+            href="#certifications"
+            className="rounded-full border border-slate-200 bg-white px-4 py-2 transition hover:border-primary hover:text-primary"
+          >
+            Certifications
           </a>
         </div>
       </section>
