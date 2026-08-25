@@ -172,34 +172,26 @@ export default function Home() {
       <section id="certifications" className="mx-auto max-w-3xl px-6 py-20">
         <h2 className="mb-6 text-2xl font-bold text-dark">Certifications</h2>
         <p className="mb-8 text-slate-600">
-          QA certifications I have earned. Certificate images can be added in the
-          placeholder slots below.
+          Certificates earned from online learning platforms.
         </p>
         <div className="grid gap-6 md:grid-cols-2">
           {[
             {
-              title: "ISTQB Foundation Level",
-              provider: "ISTQB",
-              status: "In Progress",
+              title: "MySkill Learning Path Certificate",
+              provider: "MySkill",
+              url: "https://storage.googleapis.com/myskill-v2-certificates/learning-path-2XhR1x0FsrUJBeFiFI45/4BvLPSKSWjdBdi4o27X1QgLiNY92-LCR3Eq66nBhQKlq4KHb0.pdf",
             },
             {
-              title: "Software Testing Fundamentals",
-              provider: "Online Course",
-              status: "Planned",
-            },
-            {
-              title: "API Testing with Postman",
-              provider: "Postman",
-              status: "Planned",
-            },
-            {
-              title: "Agile Testing Basics",
-              provider: "Coursera / Udemy",
-              status: "Planned",
+              title: "SkillAcademy Certificate",
+              provider: "SkillAcademy",
+              url: "https://skillacademy.com/sertifikat/GOIOEJF5KP1SJQ",
             },
           ].map((cert) => (
-            <div
+            <a
               key={cert.title}
+              href={cert.url}
+              target="_blank"
+              rel="noreferrer"
               className="overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:border-primary/40"
             >
               <div className="flex h-40 items-center justify-center bg-slate-100 text-sm text-slate-400">
@@ -208,19 +200,10 @@ export default function Home() {
               <div className="p-6">
                 <div className="mb-3 flex items-center justify-between">
                   <h3 className="font-semibold text-dark">{cert.title}</h3>
-                  <span
-                    className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${
-                      cert.status === "In Progress"
-                        ? "bg-amber-100 text-amber-700"
-                        : "bg-slate-100 text-slate-600"
-                    }`}
-                  >
-                    {cert.status}
-                  </span>
                 </div>
                 <p className="text-sm text-slate-500">{cert.provider}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
