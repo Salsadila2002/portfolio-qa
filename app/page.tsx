@@ -177,7 +177,7 @@ export default function Home() {
         <div className="grid gap-6 md:grid-cols-2">
           {[
             {
-              title: "MySkill Learning Path Certificate",
+              title: "Software Quality Assurance",
               provider: "MySkill",
               url: "https://storage.googleapis.com/myskill-v2-certificates/learning-path-2XhR1x0FsrUJBeFiFI45/4BvLPSKSWjdBdi4o27X1QgLiNY92-LCR3Eq66nBhQKlq4KHb0.pdf",
             },
