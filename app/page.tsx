@@ -62,12 +62,6 @@ export default function Home() {
           >
             Get in Touch
           </a>
-          <a
-            href="#projects"
-            className="rounded-lg border border-slate-300 bg-white px-6 py-3 font-medium text-slate-700 transition hover:border-primary hover:text-primary"
-          >
-            View Projects
-          </a>
         </div>
       </section>
 
