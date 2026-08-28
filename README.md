@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3001](http://localhost:3001).
 
 ## Build
 
@@ -17,7 +17,7 @@ Open [http://localhost:3000](http://localhost:3000).
 npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) after running `npm run dev`.
+Open [http://localhost:3001](http://localhost:3001) after running `npm run dev`.
 
 ## Deploy on Vercel
 

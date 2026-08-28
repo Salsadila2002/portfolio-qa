@@ -16,6 +16,8 @@ const MailIcon = () => (
   </svg>
 );
 
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -199,11 +201,13 @@ export default function Home() {
             {
               title: "Software Quality Assurance",
               provider: "MySkill",
+              image: "/certificates/myskill-salsa.png",
               url: "https://storage.googleapis.com/myskill-v2-certificates/learning-path-2XhR1x0FsrUJBeFiFI45/4BvLPSKSWjdBdi4o27X1QgLiNY92-LCR3Eq66nBhQKlq4KHb0.pdf",
             },
             {
               title: "SkillAcademy Certificate",
               provider: "SkillAcademy",
+              image: "/certificates/skillacademy-salsa.png",
               url: "https://skillacademy.com/sertifikat/GOIOEJF5KP1SJQ",
             },
           ].map((cert) => (
@@ -214,8 +218,13 @@ export default function Home() {
               rel="noreferrer"
               className="overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:border-primary/40"
             >
-              <div className="flex h-40 items-center justify-center bg-slate-100 text-sm text-slate-400">
-                <span>Certificate Image</span>
+              <div className="relative h-40 w-full bg-slate-100">
+                <Image
+                  src={cert.image}
+                  alt={cert.title}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6">
                 <div className="mb-3 flex items-center justify-between">
