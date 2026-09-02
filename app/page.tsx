@@ -30,16 +30,14 @@ export default function Home() {
           Salsadila Puspitasari
         </h1>
         <p className="max-w-xl text-lg text-slate-600">
-          Detail-oriented beginner in Quality Assurance. I help teams ship
-          better software by learning how to find, report, and track bugs
-          with clarity.
+          Computer Systems Engineering graduate/student passionate about Software Quality Assurance. Focused on manual testing, creating structured test documentation, and ensuring seamless software functionality.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <a
             href="#contact"
             className="rounded-lg bg-primary px-6 py-3 font-medium text-white transition hover:bg-sky-600"
           >
-            Get in Touch
+            Contact Me
           </a>
         </div>
         <div className="mt-10 flex flex-wrap justify-center gap-4 text-sm font-medium text-slate-600">
@@ -47,7 +45,7 @@ export default function Home() {
             href="#experience"
             className="rounded-full border border-slate-200 bg-white px-4 py-2 transition hover:border-primary hover:text-primary"
           >
-            Experience
+            Experience and Organization
           </a>
           <a
             href="#skills"
@@ -74,11 +72,7 @@ export default function Home() {
       <section id="about" className="mx-auto max-w-3xl px-6 py-20">
         <h2 className="mb-6 text-2xl font-bold text-dark">About Me</h2>
         <p className="leading-relaxed text-slate-600">
-          I am starting my journey in software quality assurance, focusing on
-          manual testing fundamentals. I enjoy breaking down requirements,
-          writing clear test cases, and learning how users actually experience a
-          product. My current goal is to master manual QA workflows and grow
-          toward test automation.
+          I am a Computer Systems Engineering student/graduate passionate about Software Quality Assurance. With a solid foundation in computer systems and hands-on experience in structured documentation, I focus on manual testing, test case design, and end-to-end testing execution. I aim to help teams deliver reliable software by catching edge cases early and detailing bug reports clearly.
         </p>
       </section>
 
@@ -89,15 +83,15 @@ export default function Home() {
           <div className="space-y-6">
             {[
               {
-                role: "QA Intern",
-                company: "Company Name",
-                period: "Month Year - Month Year",
-                desc: "Assisted in manual testing, wrote test cases, and reported bugs using spreadsheets.",
+                role: "IT Staff",
+                company: "PDAM Tirta Khatulistiwa Pontianak",
+                period: "July - August 2024",
+                desc: "Developed an integrated, web-based internal complaint system at PDAM to streamline the process of submitting, monitoring, and resolving internal grievances. Implemented the system on a small scale as a case study and evaluated its performance.",
               },
               {
                 role: "Secretary",
-                company: "Organization Name",
-                period: "Month Year - Month Year",
+                company: "HIMASTER (Himpunan Mahasiswa Rekayasa Sistem Komputer)",
+                period: "May 2021 - April 2022",
                 desc: "Managed documentation, meeting minutes, and internal communications.",
               },
             ].map((exp) => (
@@ -127,12 +121,12 @@ export default function Home() {
           </h2>
           <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
             {[
-              { title: "Manual Testing", desc: "Functional, regression, UAT" },
+              { title: "Manual Testing", desc: "Functional, Regression, Smoke Testing" },
               { title: "Test Case Design", desc: "Scenario, step-by-step execution" },
               { title: "Bug Reporting", desc: "Clear reproduction steps & evidence" },
-              { title: "Microsoft Excel", desc: "Test data & traceability matrices" },
+              { title: "Microsoft Excel", desc: "Test data" },
               { title: "Google Spreadsheet", desc: "Collaborative test planning" },
-              { title: "Postman", desc: "API testing basics" },
+              { title: "Postman", desc: "API Testing Basics" },
             ].map((skill) => (
               <div
                 key={skill.title}
@@ -150,34 +144,40 @@ export default function Home() {
       <section id="projects" className="mx-auto max-w-3xl px-6 py-20">
         <h2 className="mb-6 text-2xl font-bold text-dark">Learning Projects</h2>
         <p className="mb-8 text-slate-600">
-          Hands-on exercises to practice QA workflows. Links will be added as
-          projects are completed.
+          Hands-on exercises to practice QA workflows. Click any project to view.
         </p>
         <div className="grid gap-6 md:grid-cols-2">
           {[
             {
-              title: "E-Commerce Test Cases",
-              desc: "Manual test cases for login, cart, and checkout flows.",
+              title: "E-Commerce DemoBlaze Test Cases",
+              desc: "Manual test cases for homepage, sign up, login, cart, and checkout flows.",
               tag: "Manual QA",
+              url: "https://docs.google.com/spreadsheets/d/19TAZaZM-FVkrnKxdHBKxEJ_rfsBIFuI1/edit?usp=sharing&ouid=115779858462579284680&rtpof=true&sd=true",
             },
             {
               title: "API Testing with Postman",
               desc: "Collection of basic GET/POST requests and status checks.",
               tag: "API",
+              url: "https://github.com/Salsadila2002/postman-api-testing-portfolio",
             },
             {
               title: "Bug Report Sample",
               desc: "Template and example bug reports with severity/priority.",
               tag: "Documentation",
+              url: "https://docs.google.com/spreadsheets/d/1Rr1ygN-JPcL4BxVyGk00bkS33tJK_5Su/edit?usp=sharing&ouid=115779858462579284680&rtpof=true&sd=true",
             },
             {
-              title: "Spreadsheet Test Plan",
-              desc: "Traceability matrix and execution report in Google Sheets.",
+              title: "Test Planning",
+              desc: "Comprehensive test strategy, case design, and execution reporting.",
               tag: "Planning",
+              url: "https://drive.google.com/file/d/1gl7KHIPyQvAc7r1RdxWDIJsKrrSl0qIV/view?usp=sharing",
             },
           ].map((project) => (
-            <div
+            <a
               key={project.title}
+              href={project.url}
+              target="_blank"
+              rel="noreferrer"
               className="rounded-xl border border-slate-200 bg-white p-6 transition hover:border-primary/40"
             >
               <span className="mb-3 inline-block rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-medium text-primary">
@@ -185,7 +185,7 @@ export default function Home() {
               </span>
               <h3 className="mb-2 font-semibold text-dark">{project.title}</h3>
               <p className="text-sm text-slate-600">{project.desc}</p>
-            </div>
+            </a>
           ))}
         </div>
       </section>
